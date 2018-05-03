@@ -67,7 +67,8 @@ def get_hathi_rec_report(oclc_num, h_result): # hathi data parser
     # Each item belongs to a single record, 
     # but a single record (e.g., the record for the journal Nature) 
     # may have many items associated with it.
-    records = h_result['records']
+    # print(h_result) # to see the data structure
+    records = h_result['records'] # h_result is a python dictionary
     items = h_result['items']
     csv_rows=[]
     for item in items:
